@@ -45,6 +45,7 @@ The following attributes are required for each user:
 * ssh_key - This should be a list of SSH keys for the user (optional). Each SSH key
   should be included directly and should have no newlines.
 * generate_ssh_key - Whether to generate a SSH key for the user (optional, defaults to no).
+* github_username - Installs ssh_keys from github username.keys
 
 In addition, the following items are optional for each user:
 
@@ -63,6 +64,7 @@ Example:
         home: /local/home/foo
         profile: |
           alias ll='ls -lah'
+        github_username: ironicbadger
         ssh_key:
           - "ssh-rsa AAAAA.... foo@machine"
           - "ssh-rsa AAAAB.... foo2@machine"
