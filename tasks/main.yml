@@ -46,6 +46,7 @@
     key: "https://github.com/{{ item.0.github_username }}.keys"
   with_items: "{{ users }}"
 
+
 - name: Setup user profiles
   blockinfile:
     block: "{{item.profile}}"
