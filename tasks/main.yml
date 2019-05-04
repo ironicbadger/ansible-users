@@ -42,8 +42,8 @@
 
 - name: add SSH authorized_keys from github
   authorized_key:
-    user: "{{ item.0.username }}"
-    key: "https://github.com/{{ item.0.github_username }}.keys"
+    user: "{{ item.username }}"
+    key: "https://github.com/{{ item.github_username }}.keys"
   with_items: "{{ users }}"
 
 
