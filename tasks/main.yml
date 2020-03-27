@@ -28,6 +28,7 @@
     update_password: "{{item.update_password | default(omit)}}"
   with_items: "{{users}}"
   tags: ['users','configuration']
+  ignore_errors: true
 
 - name: SSH keys
   authorized_key:
