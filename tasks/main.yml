@@ -46,6 +46,7 @@
     user: "{{ item.username }}"
     key: "https://github.com/{{ item.github_username }}.keys"
   with_items: "{{ users }}"
+  when: "'github_username' in item"
 
 
 - name: Setup user profiles
