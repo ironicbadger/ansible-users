@@ -25,6 +25,11 @@
     home: "{{ item.home | default('/home/' + item.username) }}"
     createhome: "{{'yes' if users_create_homedirs else 'no'}}"
     generate_ssh_key: "{{ item.generate_ssh_key | default(omit) }}"
+    ssh_key_bits: "{{ item.generate_ssh_key_bits | default(omit) }}"
+    ssh_key_comment: "{{ item.generate_ssh_key_comment | default(omit) }}"
+    ssh_key_file: "{{ item.generate_ssh_key_file | default(omit) }}"
+    ssh_key_passphrase: "{{ item.generate_ssh_key_passphrase | default(omit) }}"
+    ssh_key_type: "{{ item.generate_ssh_key_type | default(omit) }}"
     update_password: "{{item.update_password | default(omit)}}"
   with_items: "{{users}}"
   tags: ['users','configuration']

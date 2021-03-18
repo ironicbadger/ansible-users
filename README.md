@@ -49,6 +49,11 @@ The following attributes are required for each user:
 
 In addition, the following items are optional for each user:
 
+* generate_ssh_key_bits - Number of bits to use when generating SSH key
+* generate_ssh_key_comment - Comment for generated SSH key
+* generate_ssh_key_file - Filename for the generated SSH key
+* generate_ssh_key_passphrase - Passphrase to add to generated SSH key
+* generate_ssh_key_type - Type of SSH key to generate
 * shell - The user's shell. This defaults to /bin/bash. The default is
   configurable using the users_default_shell variable if you want to give all
   users the same shell, but it is different than /bin/bash.
